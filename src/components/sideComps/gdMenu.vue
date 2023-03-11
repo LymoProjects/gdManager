@@ -34,6 +34,29 @@ function getMenuItemVNode(routeTo, btnContent) {
     )
 }
 
+function getNormalMenuItemVNode(btnContent) {
+    return () => h(
+        NSpace,
+        {
+            size: "large",
+            justify: "center"
+        },
+        {
+            default: () => h(
+                NButton,
+                {
+                    text: true,
+                    size: "large",
+                    strong: true
+                },
+                {
+                    default: () => btnContent
+                }
+            )
+        }
+    )
+}
+
 const activeKey = ref("welcomeKey")
 
 const menuOptions = [
@@ -50,12 +73,30 @@ const menuOptions = [
         key : "logOperationKey"
     },
     {
-        label : getMenuItemVNode("/userOperation", "用户管理"),
-        key : "userOperationKey"
-    },
-    {
         label : getMenuItemVNode("/identify", "用户鉴别"),
         key : "identifyKey"
+    },
+    {
+        label : getNormalMenuItemVNode("用户管理"),
+        key : "userOperationKey",
+        children : [
+            {
+                label : getMenuItemVNode("/userInsert", "用户添加"),
+                key : "userInsertKey"
+            },
+            {
+                label : getMenuItemVNode("/userUpdate", "用户更新"),
+                key : "userUpdateKey"
+            },
+            {
+                label : getMenuItemVNode("/userDelete", "用户删除"),
+                key : "userDeleteKey"
+            },
+            {
+                label : getMenuItemVNode("/userSelect", "用户查询"),
+                key : "userSelectKey"
+            }
+        ]
     }
 ]
 </script>

@@ -3,5 +3,5 @@ import {NButton} from "naive-ui";
 </script>
 
 <template>
-    <NButton size="large">Click Me User</NButton>
+    <NButton size="large">Click Me Delete</NButton>
 </template>

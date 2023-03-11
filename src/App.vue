@@ -5,6 +5,10 @@
     import GdMenu from "./components/sideComps/gdMenu.vue";
     import GdTool from "./components/sideComps/gdTool.vue";
     import GdHeader from "./components/mainComps/gdHeader.vue";
+
+    import {usePasswordStore} from "./stores/password";
+
+    const passwordStore = usePasswordStore()
 </script>
 
 <template>
@@ -20,7 +24,7 @@
             <NSpace vertical>
                 <GdHeader />
                 <NScrollbar trigger="none" style="max-height: 600px">
-                    <RouterView></RouterView>
+                    <RouterView v-if="passwordStore.pwd === passwordStore.truePwd"></RouterView>
                 </NScrollbar>
             </NSpace>
         </NGridItem>
