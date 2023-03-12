@@ -23,7 +23,7 @@
         <NGridItem span="3">
             <NSpace vertical>
                 <GdHeader />
-                <NScrollbar trigger="none" style="max-height: 600px">
+                <NScrollbar trigger="none" style="max-height: 800px">
                     <RouterView v-if="passwordStore.pwd === passwordStore.truePwd"></RouterView>
                 </NScrollbar>
             </NSpace>
