@@ -85,14 +85,6 @@ const menuOptions = [
                 key : "userInsertKey"
             },
             {
-                label : getMenuItemVNode("/userUpdate", "用户更新"),
-                key : "userUpdateKey"
-            },
-            {
-                label : getMenuItemVNode("/userDelete", "用户删除"),
-                key : "userDeleteKey"
-            },
-            {
                 label : getMenuItemVNode("/userSelect", "用户查询"),
                 key : "userSelectKey"
             }

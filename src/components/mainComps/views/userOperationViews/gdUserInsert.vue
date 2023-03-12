@@ -1,7 +1,9 @@
 <script setup>
-import {NButton} from "naive-ui";
+import {NButton, NSpace, NInput, NList, NListItem, NDivider} from "naive-ui";
 </script>
 
 <template>
-    <NButton size="large">Click Me Insert</NButton>
+    <NSpace justify="center" size="large">
+        
+    </NSpace>
 </template>
